@@ -2,8 +2,8 @@
 
 
 ---
-- [AÇIKLAMA](#description)
-- [LİSANS](#license)
+- [AÇIKLAMA](#açıklama)
+- [LİSANS](#lisans)
 - [KULLANMADAN ÖNCE OKUYUN](#disclaimer)
 - [WARNINGS](#warnings)
 - [DONATIONS](#donations)
@@ -57,7 +57,7 @@
 
 
 ---
-## DESCRIPTION
+## AÇIKLAMA
 
 ACC is an Android software mainly intended for [extending battery service life](https://batteryuniversity.com/article/bu-808-how-to-prolong-lithium-based-batteries).
 In a nutshell, this is achieved through limiting charging current, temperature, and voltage.
