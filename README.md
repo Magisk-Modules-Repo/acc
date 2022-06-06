@@ -2,9 +2,9 @@
 
 
 ---
-- [DESCRIPTION](#description)
-- [LICENSE](#license)
-- [DISCLAIMER](#disclaimer)
+- [AÇIKLAMA](#description)
+- [LİSANS](#license)
+- [KULLANMADAN ÖNCE OKUYUN](#disclaimer)
 - [WARNINGS](#warnings)
 - [DONATIONS](#donations)
 - [PREREQUISITES](#prerequisites)
@@ -66,7 +66,7 @@ Regardless of whether the system is rooted with Magisk, the installation is alwa
 
 
 ---
-## LICENSE
+## LİSANS
 
 Copyright 2017-2022, VR25
 
