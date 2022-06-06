@@ -14,13 +14,13 @@
   - [(Kurulum) Gereksinimleri](#kurulum-gereksinimleri)
   - [Tarball veya zip dosyalarından kurulum](#tarball-veya-zip-dosyalarından-kurulum)
     - [Notlar](#notlar-1)
-  - [Lokal kaynaktan veya GitHub'dan indir](#install-from-local-source-or-github)
-    - [Notlar](#nolar-2)
+  - [Lokal kaynaktan veya GitHub'dan indir](#lokal-kaynaktan-veya-githubdan-indir)
+    - [Notlar](#notlar-2)
 - [Varsayılan ayarlar](#varsayılan-ayarlar)
 - [Kurulum/Kullanım](#kurulumkullanım)
   - [Terminal Komutları](#terminal-komutları)
 - [Pluginler](#pluginler)
-- [Front end developerler için notlar/tavsiyeler](#front-end-developerlar-için-notlartavsiyeler)
+- [Front end developerlar için notlar/tavsiyeler](#front-end-developerlar-için-notlartavsiyeler)
   - [Temeller](#temeller)
   - [ACC Yükleme/Güncelleme](#acc-yüklemegüncelleme)
   - [ACC Kaldırma](#acc-kaldırma)
@@ -41,17 +41,17 @@
   - [Samsung, Şarj 70% seviyede duruyor](#samsung-şarj-70-seviyede-duruyor)
   - [Yavaş şarj olma](#yavaş-şarj-olma)
   - [Şarj olmuyor](#şarj-olmuyor)
-  - [Beklenmedik reboot](#beklenmedik-reboot)
+  - [Beklenmedik yeniden başlatma](#beklenmedik-yeniden-başlatma)
   - [WARP, VOOC ve Diğer hızlı şarj teknolojileri](#warp-vooc-ve-diğer-hızlı-şarj-teknolojileri)
   - [accd neden durdu?](#accd-neden-durdu)
 - [Güç kaynağı logları (yardım lazım)](#güç-kaynağı-logları-yardım-lazım)
-- [Lokalize etme](#localize-etme)
+- [Lokalize etme](#lokalize-etme)
 - [Tavsiyeler](#tavsiyeler)
   - [Eğer bataryanız çok eskiyse veya çok hızlı deşarj oluyorsa şarj etme akımını kısıtlayın](eğer-bataryanız-çok-eskiyse-veya-çok-hızlı-deşarj-oluyorsa-şarj-etme-akımını-kısıtlayın)
   - [Akım ve voltaj odaklı şarj kontrolü](#akım-ve-voltaj-odaklı-şarj-kontrolü)
   - [Genel](#genel)
   - [Google Pixel Cihazları](#google-pixel-cihazları)
-  - [Idle Mode ve Alternatifler](#idle-mode-ve-alternatifler)
+  - [idle Mod ve Alternatifler](#idle-mod-ve-alternatifler)
 - [Sıkça sorulan sorular (SSS)](#sıkça-sorulan-sorular-sss)
 - [Linkler](#linkler)
 
@@ -85,7 +85,7 @@ lazım. Yoksa, bkz. <https://www.gnu.org/licenses/>.
 
 Bu yazılımı yüklemeden önce bu kısımı defalarca kez okuyun/yeniden okuyun.
 
-Henüz herhangi bir cihaza zarar verilemiş olsa da, bu yazılımın geliştiricisi yanlış kullanım sonucu oluşabilecek hiçbir şey için sorumluluk almamaktadır.
+Henüz herhangi bir cihaza zarar verilmemiş olsa da, bu yazılımın geliştiricisi yanlış kullanım sonucu oluşabilecek hiçbir şey için sorumluluk almamaktadır.
 Dolandırıcılığı önlemek adına, bu proje ile bağlantılı hiçbir linki mirror(kısaltma işlemi) uygulamayın.
 Farklı (tarballs/zip) buildleri PAYLAŞMAYIN! Orijinal linkleri kullanın.
 
@@ -95,14 +95,14 @@ Farklı (tarballs/zip) buildleri PAYLAŞMAYIN! Orijinal linkleri kullanın.
 
 ACC Android sistemindeki ([kernel](https://duckduckgo.com/lite/?q=kernel+android))'da şarj için sorumlu devrenin parametreleri ile oynar.
 Bu yazılımın geliştiricisi yanlış kullanım sonucu oluşabilecek hiçbir şey için sorumluluk almaz.
-Bu yazılı doğru/yanlış kullanıyorsanız, bu risk size aittir!
+Bu yazılımı doğru/yanlış kullanıyorsanız, bu risk size aittir!
 
 Bazı cihazlar, özellikle Xiaomi, bug'lı bir PMIC'a (Power Management Integrated Circuit) sahipler.
 Bu problem cihazın şarj olmasını engelliyor.
 Bataryanızın çok düşük değerlere düşmediğinden emin olun.
 acc'nin otomatik kapatma özelliğini kullanmanız şiddetle tavsiye edilir.
 
-Ekstra detayla için [ilgili XDA forum postu](https://forum.xda-developers.com/t/rom-official-arrowos-11-0-android-11-0-vayu-bhima.4267263/post-85119331)
+Ekstra detaylar için [ilgili XDA forum postu](https://forum.xda-developers.com/t/rom-official-arrowos-11-0-android-11-0-vayu-bhima.4267263/post-85119331)
 
 [lybxlpsv](https://github.com/lybxlpsv) bootlader'dan sonra sisteme geçerek PMIC sıfırlamanızı tavsiye ediyor. (fazla teknik)
 
@@ -138,8 +138,8 @@ Diğer çalıştırılabilir veya statik binary'ler de /data/adb/vr25/bin/ dizin
 
 0. Bütün kodlar/aksiyonlar root gerektirir.
 
-1. Yükleme/Güncelleme: zip dosyasından yğkleyin\* veya bir front-end uygulama kullanın.
-Güncellemek için 2 yo daha mevcut: `acc --upgrade` (online) ve `acc --flash` (zip yükleyici).
+1. Yükleme/Güncelleme: zip dosyasından yükleyin\* veya bir front-end uygulaması kullanın.
+Güncellemek için 2 yol daha mevcut: `acc --upgrade` (online) ve `acc --flash` (zip yükleyici).
 Kaldırmadan/kurulumdan sonra yeniden başlatmak çoğu durumda gerekli değil.
 
 2. [Opsiyonel] `acc` (asistan) kodunu çalıştırın. Hatırlamanız gereken tek şey bu.
@@ -155,11 +155,11 @@ Bir sorunu raporlamadan veya bir soru sormadan önce olabildiğince okumaya çal
 
 Aşama `2` ve `3` opsiyonel, çünkü varsayılan ayarlar mevcut.
 Detaylar için, aşağıdaki [varsayılan ayarlar](#varsayılan-ayarlar) kısmına bakın.
-Kullanıcılar için aşamayi `2`'nin uygulanması mevcut opsiyonlara alışmak adına şiddetle tavsiye edilir.
+Kullanıcılar için aşama `2`'nin uygulanması mevcut opsiyonlara alışmak adına şiddetle tavsiye edilir.
 
 Ayarlar biraz fazla gibi gelebilir. Anladığınız yerden başlayın.
 Varsayılan ayarlar olayı çoğunlukla toparlıyor.
-Herşeyi düzenlemeniz lazımmış gibi hissetmeyin. Muhtemelen yapmamalısınız da - eğer ne yaptığınızı bilmiyorsanız.
+Her şeyi düzenlemeniz lazımmış gibi hissetmeyin. Muhtemelen yapmamalısınız da - eğer ne yaptığınızı bilmiyorsanız.
 
 Kaldırma: `acc --uninstall` komudunu çalıştırın veya `/data/adb/vr25/acc-data/acc-uninstaller.zip` dosyasını yükleyin\*(flashlayın).
 
@@ -192,11 +192,11 @@ sistemi kullanıyorsanız)
 
 #### Notlar
 
-- build.sh automatically sets/corrects `id=*` in `*.sh` and `update-binary` files.
-Refer to framework-details.txt for a full list of tasks carried out by it.
-To skip generating archives, run the build script with a random argument (e.g. bash build.sh h).
+- build.sh otomatik olarak `*.sh` ve `update-binary` dosyaları içindeki `id=*` kısmını doğrular/düzeltir.
+Detaylar için bkz -> framework-details.txt.
+Arşiv yaratma işlemini geçmek için, kurulum script'ini rastgele bir argüman ile çalıştırın (e.g. bash build.sh h).
 
-- To update the local source code, run `git pull --force` or re-download it (with wget/curl) as described above.
+- Lokal kaynak kodunu güncellemek için `git pull --force` veya (wget/curl kullanara) yukarıda tanımlandığı gibi yeniden indirin.
 
 
 ### Lokal kaynaktan veya GitHub'dan indir
@@ -217,7 +217,7 @@ Arşiv script ile aynı klasörde olmalı - ve GitHub'dan alınmalıdır: https:
 
 - Sırası ile varsayılan yükleme klasörü: `/data/data/mattecarra.accapp/files/` (ACC Uygulaması, eğer Magisk kurulu değilse), `/data/adb/modules/` (Magisk) ve `/data/adb/` (diğer root'lar için).
 
-- Hiç argüman/opsiyon zorunlu değildir.
+- Hiçbir argüman/opsiyon zorunlu değildir.
 İstisna `--non-interactive` front-end uygulamalar için.
 
 - `install-online.sh` için `--force` opsiyonu tekrar kurma veya downgrade(sürüm düşürme) içindir.
@@ -617,7 +617,7 @@ Ya tamamen seveceğiniz ya da tamamen nefret edeceğinizi bir asistan.
 
 Terminal kullanmaktan rahatsız oluyorsanız, bu kısmı atlayın ve bir fron-end app kullanın.
 
-ALternatif olarak, `/data/adb/vr25/acc-data/config.txt` dosyasını düzenlemek için bir `text editor` kullanabilirsiniz.
+Alternatif olarak, `/data/adb/vr25/acc-data/config.txt` dosyasını düzenlemek için bir `text editor` kullanabilirsiniz.
 Ayarlar(config) dosyası içinde aynı zamanda yönergeler barındırıyor.
 Bunlar yukarıda [varsayılan ayarlar](#varsayılan-ayarlar) kısmında bulunanlar ile aynı.
 
@@ -900,7 +900,7 @@ A daemon restart is required to load new/modified plugins.
 
 
 ---
-## Front end developerler için notlar/tavsiyeler
+## Front end developerlar için notlar/tavsiyeler
 
 ### Temeller
 
@@ -1075,12 +1075,12 @@ Detaylar için yukarıdaki [varsayılan ayarlar](#varsayılan-ayarlar) kısmına
 
 ### Şarj portu
 
-Fabrika ayalarında, ACC çalışan herhangi bir [charging switch](https://github.com/VR-25/acc/blob/dev/acc/charging-switches.txt)n (şarj portu) kullanır. Ancak, işler her zaman düzgün gitmeyebiliyor.
+Fabrika ayalarında, ACC çalışan herhangi bir [charging switch](https://github.com/VR-25/acc/blob/dev/acc/charging-switches.txt) (şarj portu) kullanır. Ancak, işler her zaman düzgün gitmeyebiliyor.
 
-- Bazı portlar spesifik koşullar altında çalışmak (e.g., mesela ekran kapalı iken).
+- Bazı portlar spesifik koşullar altında çalışmaz (e.g., mesela ekran kapalı iken).
 
 - Bazılarında bir [wakelock](https://duckduckgo.com/lite/?q=wakelock) mevcuttur.
-Bu şarj işlemi durduktan sonra cihazın hızlı deşarj olmasına neden olur.
+Bu, şarj işlemi durduktan sonra cihazın hızlı deşarj olmasına neden olur.
 
 - Sistem tarafından aktif edilen şarj işlemi, ACC tarafından birkaç saniye sonra kapatılıyor.
 Bunun bir sonucu olarak, batarya eninde sonunda %100 şarja ulaşıyor, pause_capacity (şarj durma seviyesi) ne olursa olsun.
@@ -1128,7 +1128,7 @@ Eğer düşük akım değerleri işe yaramıyor ise `current_workaround=true` de
 Detaylar için [varsayılan ayarlar](#varsayılan-ayarlar) kısmına bakınız.
 
 Varsayılan şarj voltaj/akımlarını `acc/ctrl-files.sh` dosyasını `/data/adb/vr25/acc-data/plugins/` dizinine kopyalayıp gerekli değişimleri yaparak kendi ayarlarınızı dikte edebilirsiniz.
-Bunda önce varsayılanlar limitlere geri dönülmesi gerektiğini not edelim, aksi takdirde sistem reboot(yeniden başlatma) gerekecektir.
+Bunda önce varsayılan limitlere geri dönülmesi gerektiğini not edelim, aksi takdirde sistemin reboot(yeniden başlatması) gerekecektir.
 Hatırlatma: yeni/değiştirilmiş pluginlerin yüklenmesi için daemon başlamalıdır.
 
 
@@ -1178,7 +1178,7 @@ Aşağıdakilerden en az biri bir sebep olabilir:
 - Şarj akımı ve/veya voltaj limitleri
 - Soğutma döngüsü (optimal olmayan şarj et/dur oranı, 50/10 veya 50/5 deneyin)
 - Sorunlu şarj portu (bkz. `Sorun Giderme > Şarj Portu`)
-- Yeter adaptör ve/veya güç kardı
+- Yetersiz adaptör ve/veya güç kardı
 
 
 ### şarj olmuyor
@@ -1194,7 +1194,7 @@ Sometimes, there may be false positives in there - i.e., due to unexpected reboo
 Send `write.log` to the developer once the reboots have stopped.
 
 
-### WARP, VOOC ve Diğer hızlı şarj teknolojileri](#warp-vooc-ve-diğer-hızlı-şarj-teknolojileri
+### WARP, VOOC ve Diğer hızlı şarj teknolojileri
 
 Charging switches may not work reliably with the original power adapter.
 This has nothing to do with acc.
@@ -1205,12 +1205,12 @@ You may also want to try stopping charging by limiting current/voltage.
 
 ### accd neden durdu?
 
-Nedeninin bulmak için `acc -l tail` komudunu çalıştırın.
+Nedenini bulmak için `acc -l tail` komudunu çalıştırın.
 Bu daemon log dosyasının son 10 satırını yazdırır.
 
 Fazlasıyla yaygın bir çıkış kodu `7` - bütün portlar şarjı devre dışı bırakmakta başarısız oldu anlamına geliyor.
-Bu kernel ile alaklı sorunlardan ötürü gerçekleşiyor (bunun önceki kısma bkz. - [şarj portu](#şarj-portu)).
-Eğer daemon çalışan portu otomatik olarak durmaya ayarlı ise (varsayılan ayar), bunun sonucu olarak durabilir.
+Bu kernel ile alaklı bir sorunlardan ötürü gerçekleşiyor (bundan önceki kısma bkz. - [şarj portu](#şarj-portu)).
+Eğer daemon çalışan portu otomatik olarak kurmaya ayarlı ise (varsayılan ayar), bunun sonucu olarak durabilir.
 Manuel olarak `acc -ss` veya `acc -s s="PORTLAR BURAYA YAZILIYOR --"` komutları ile bir port belirlemek accd'nin otomatik olarak devre dışı kalmasını bu durumda önler.
 
 
@@ -1218,7 +1218,7 @@ Manuel olarak `acc -ss` veya `acc -s s="PORTLAR BURAYA YAZILIYOR --"` komutları
 ## Güç kaynağı logları (yardım lazım)
 
 Lütfen `acc -le` komudunu çalıştırıp `/data/adb/vr25/acc-data/logs/power_supply-*.log` dizinindeki çıktıyı [dropbox](https://www.dropbox.com/request/WYVDyCc0GkKQ8U5mLNlH) linkine yükleyin (herhangi bir hesap oluşturmanız gerekli değil).
-Bu dosyası değeri ölçülmez düzeyde güç kaynağı hakkında bilgi içeriyor, batarya detayları ve mevcut şarj yöntemleri gibi.
+Bu dosya değeri ölçülmez düzeyde güç kaynağı hakkında bilgi içeriyor, batarya detayları ve mevcut şarj yöntemleri gibi.
 Karşılıklı yarar sağlanması adına halka açık bir database oluşturuluyor.
 Yardımınız fazlası ile takdir görecektir.
 
@@ -1262,7 +1262,7 @@ Alternatively, a _compressed_ archive of translated `strings.sh` and `README.md`
 
 ### Eğer bataryanız çok eskiyse veya çok hızlı deşarj oluyorsa şarj etme akımını kısıtlayın
 
-Bu, bataryanın total hayatını olumlu etkiler ve hatta _deşarj_ olma hızını bile azaltabilir .
+Bu, bataryanın total hayatını olumlu etkiler ve hatta _deşarj_ olma hızını bile azaltabilir.
 
 750-1000mA aralığı gündelik kullanım için uygundur.
 
@@ -1277,18 +1277,18 @@ charging_switch=milliamps veya charging_switch=3700-4300 (millivolts) değişken
 
 Sonuç olarak bu işlem voltaj/akım kontrol dosyalarını _[sahte] şarj portları_'na dönüştürür.
 
-Bunu yaygın ve pozitif bir yan etkisi ise _[sahte] idle mod_'dur - i.e., batarya bir çeşit power buffer gibi çalışır.
+Bunun yaygın ve pozitif bir yan etkisi ise _[sahte] idle mod_ 'dur - i.e., batarya bir çeşit power buffer gibi çalışır.
 
 Not: kernel'a bağlı olarak - `pause_capacity`(durma seviyesinde), şarj statüsü değişebilir veya ("deşarj" veya "şarj olmuyor") veya sabit kalabilir ("şarj ediliyor" - bir problem değil).
-Aralıklı olarak değişiyorsa, akım çok az demektir; probleml çözülene kadar arttırın.
+Aralıklı olarak değişiyorsa, akım çok az demektir; problem çözülene kadar arttırın.
 
 
 ### Genel
 
- _batarya idle mod_'unu bir voltj limiti ile taklit edin: `acc -s pc=101 rc=0 mcv=3900`.
+ _batarya idle mod_ 'unu bir voltaj limiti ile taklit edin: `acc -s pc=101 rc=0 mcv=3900`.
 İlk iki argüman şarj başlama/durma fonksiyonunu devre dışı bırakıyor.
-Son olan da bataryanın ne derecede dolacağını ayarların bir voltaj dikte ediyor.
-Batarya, voltaj yükseldiğinde bir _[sahte] idle mod_'a giriyor.
+Son olan da bataryanın ne derecede dolacağını ayarlayan bir voltaj dikte ediyor.
+Batarya, voltaj yükseldiğinde bir _[sahte] idle mod_ 'a giriyor.
 Sonuç olarak, bir power buffer gibi çalışıyor.
 
 Benzer bir etki `acc 60 59` (yüzdeler) ve `acc 3900` (milivolt) komutları ile de elde edilebilir.
@@ -1308,18 +1308,18 @@ Bu bütün cihazlarda çalışmayabilir.
 Çalışmadığında herhangi bir negatif etkisi yoktur.
 
 
-### Idle Mode and Alternatifler
+### idle Mod and Alternatifler
 
-1 - Idle mod destekleyin bir şarj portu seçmek (açık ara kazanan).
+1 - Idle mod destekleyen bir şarj portu seçmek (açık ara kazanan).
 Cihazın kendi kendisine deşarj olabileceğini unutmayın.
 Bu batarya sanki fiziksel olarak takılı değilmiş gibi çalışır.
 Aşırı yavaş deşarj oranları beklendik sonuçlardır.
 
-2 - `charging_switch=0`: eğer akım dalgalanıyor ise, aynı zamanda `current_workaround=true` (yalnızca yeniden başlatıldıktan sonra etkili olur).
+2 - `charging_switch=0`: eğer akım dalgalanıyor ise deneyiniz, aynı zamanda `current_workaround=true` (yalnızca yeniden başlatıldıktan sonra etkili olur).
 Eğer bu method çalışıyorsa, etkisi aynı `#1` gibidir.
 
 3 - `charging_switch=3900`: yalnızca voltaj kontrolü destekleyen cihazlarda çalışır.
-Alışılık idle mod'un aksine, cihaz sürekli olarak 3900mV'ta kalır.
+Alışıldık idle mod'un aksine, cihaz sürekli olarak 3900mV'ta kalır.
 Yüksek voltajlar için bu yöntem iyi değildir.
 Bizler bataryaya binen stresi azaltmaya çalışıyoruz.
 Uzun bir süre boyunca 3900 üstü bir voltaj tavsiye _edilmemektedir_.
